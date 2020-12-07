@@ -1,0 +1,9 @@
+相对路径没用对，注意INCLUDEPATH  和 LIBS后接的相对路径是不一样的。
+include后接的相对路径./代表是源代码文件目录
+libs 后接的相对路径./代表的是执行文件exe所在目录
+
+可以用这个$$PWD当前目录，这样不会混淆。
+上面的写法是没问题的，当然你也可以用 -L mylibpath -l mylib
+
+
+C:\Users\Xinje\Desktop\client\client\include\gtest\gtest-message.h:191: error: undefined reference to `testing::internal::StringStreamToString(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >*)'
